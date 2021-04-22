@@ -1,12 +1,11 @@
-stage('Always Run'){
-        steps {
-                echo "Hello Jenkins"
+pipeline{
+    agent any
+
+    stages{
+        stage('Verify Branch') {
+            steps {
+                echo $GIT_BRANCH
+            }
         }
-}
-stage('Runs on master'){
-        when(branch 'main') {
-          steps {
-                echo "Hello Jenkins"
-          }
     }
 }
