@@ -4,7 +4,7 @@ stage('Always Run'){
         }
 }
 stage('Runs on master'){
-        when(branch 'master') {
+        when(branch 'main') {
           steps {
                 echo "Hello Jenkins"
           }
