@@ -9,6 +9,7 @@ pipeline{
             post {
                 success {
                     echo "App started succesfully"
+                    echo "$BUILD_NUMBER"
                 }
                 failure {
                     echo "Some error ocurred"
