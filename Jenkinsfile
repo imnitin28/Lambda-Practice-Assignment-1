@@ -4,6 +4,7 @@ pipeline{
     stages{
         stage('Verify Branch') {
             steps {
+                echo "Hello current branch "
                 echo $GIT_BRANCH
             }
             post {
